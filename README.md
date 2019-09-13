@@ -6,7 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Install command
 
-Run `npm install` to install dependencies from package.json.
+Download the Zip file or Clone the application and go to the downloaded folder, perform below step:
+        
+      Run `npm install` to install dependencies from package.json.
 
 ## Running the Application + Mock Json-server
 
