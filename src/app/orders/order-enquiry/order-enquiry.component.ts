@@ -40,7 +40,6 @@ export class OrderEnquiryComponent implements OnInit {
     this.orderService.clear_orders();
     if(this.custSelect === 'Select Customer' || this.custSelect === '') {
       var url = this.formUrl("");
-      console.log(url);
       this.orderService.get_orders(url).subscribe((res : any[])=>{
         this.orderService.add_order_summary(this.getTotalChargeCustomer(res),res.length, this.startDate, this.endDate);
         if(res.length>0) {
@@ -53,10 +52,8 @@ export class OrderEnquiryComponent implements OnInit {
      });
     }  else {
       var url = this.formUrl(this.custSelect);
-      console.log(url);
       this.orderService.get_orders_byId(url).subscribe((res : any)=>{
         this.orderService.add_order_summary(res.charge_customer.total_price, 1, this.startDate, this.endDate);
-        console.log('get_orders_byId '+JSON.stringify(res));
         this.orderService.add_order(res);
       });
     }
