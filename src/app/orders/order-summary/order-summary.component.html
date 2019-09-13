@@ -1,0 +1,13 @@
+<div class="container" *ngIf="orderSummary">
+        <table class="table table-striped">
+                <tbody style="max-height: 10px">
+                  <tr>
+                       <td> <b>Start Date :</b> {{orderSummary.startDate | date}}</td>
+                       <td> <b>End Date :</b> {{orderSummary.endDate  | date}}</td>
+                       <td> <b>No. of Days :</b> {{orderSummary.dateDiff}}</td>
+                       <td> <b>No. of Orders :</b> {{orderSummary.noOfOrders}}</td>
+                       <td> <b>Total Charge :</b> {{orderSummary.totalCharge}}</td>
+                   </tr>
+                </tbody>
+        </table>
+</div>
